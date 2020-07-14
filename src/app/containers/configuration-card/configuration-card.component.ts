@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigurationCardComponent implements OnInit {
 
+  colors: any;
   constructor() { }
 
   ngOnInit(): void {
+    this.colors = {
+      fill: "#DDDEDF",
+      stroke: "#ADAFB2"
+    }
   }
 
+  tickmarkHandler() {
+    this.colors.fill = "#FFCC11";
+    this.colors.stroke = "#43485C";
+  }
 }

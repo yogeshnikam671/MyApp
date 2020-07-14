@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-radio-cards',
@@ -7,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RadioCardsComponent implements OnInit {
 
+  @Output() radiobuttonClicked = new EventEmitter<any>();
   data: any;
   class: string;
   checkedRadioCardId: number;
   constructor() { }
 
   radioClickHandler(id) {
+    this.radiobuttonClicked.emit();
     if (this.checkedRadioCardId) {
       this.data[this.checkedRadioCardId - 1].isChecked = false;
     }

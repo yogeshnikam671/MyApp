@@ -1,7 +1,6 @@
 .radioCards{
   background-color: white;
-  width: 1062px;
-  margin: 0 10%;
+  margin: 0;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;

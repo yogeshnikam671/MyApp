@@ -2,15 +2,15 @@
   position: relative;
   border: 1px solid #ccc;
   border-radius: 4px;
-  height: 140px;
+  height: 121px;
   width: fit-content;
-  padding: 14px;
-  padding-right:  0;
+  padding-left: 14px;
+  padding-top: 20px;
   background-color:#F6F6FA;
 }
 .radioCard p{
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: 'Nunito', sans-serif;
 }
 .radioCard input{
@@ -51,7 +51,7 @@
 
 .radio-checked{
   position: absolute;
-  top: 22px;
+  top: 28px;
   left: 19px;
 }
 
