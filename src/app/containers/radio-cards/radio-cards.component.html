@@ -1,6 +1,9 @@
 <div class="radioCards">
-  <app-radio-card class="radioCard" *ngFor="let dataElem of data"
-                  [title]="dataElem.title" [description]="dataElem.description"
-                  (radioClickedEvent)="disableRadioButton()" [disableRadio] = "disableRadio">
+  <app-radio-card *ngFor="let dataElement of data"
+                  [className] = "getClass(dataElement.isChecked)"
+                  [id] = "dataElement.id"
+                  [title]="dataElement.title" [description]="dataElement.description"
+                  [isChecked]="dataElement.isChecked"
+                  (radioClickedEvent)="radioClickHandler($event)">
   </app-radio-card>
 </div>

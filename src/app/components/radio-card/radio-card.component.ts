@@ -9,20 +9,17 @@ export class RadioCardComponent implements OnInit {
 
   @Input() title: string;
   @Input() description: string;
-  @Output() radioClickedEvent = new EventEmitter<boolean>();
-  @Input() disableRadio: boolean;
+  @Output() radioClickedEvent = new EventEmitter<number>();
 
-  isChecked: boolean;
-  class = 'radioCard';
+  @Input() isChecked: boolean;
+  @Input() className: string;
+  @Input() id: number;
   constructor() { }
 
   radioCheckedHandler() {
-    this.isChecked = true;
-    this.class += ' radioCard-invert';
-    this.radioClickedEvent.emit(true); // going to use disabled attribute to achieve the radio behavior
+    this.radioClickedEvent.emit(this.id);
   }
 
   ngOnInit(): void {
-    this.isChecked = false;
   }
 }
