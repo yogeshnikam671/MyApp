@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-configuration-card',
@@ -7,18 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigurationCardComponent implements OnInit {
 
+  @Input() query: string;
   colors: any;
   constructor() { }
 
   ngOnInit(): void {
     this.colors = {
-      fill: "#DDDEDF",
-      stroke: "#ADAFB2"
-    }
+      fill: '#DDDEDF',
+      stroke: '#ADAFB2'
+    };
   }
-
   tickmarkHandler() {
-    this.colors.fill = "#FFCC11";
-    this.colors.stroke = "#43485C";
+    this.colors.fill = '#FFCC11';
+    this.colors.stroke = '#43485C';
   }
 }
