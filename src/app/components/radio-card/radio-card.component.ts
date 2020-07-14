@@ -21,6 +21,8 @@ export class RadioCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.className = 'radioCard';
+    if (!this.className) {
+      this.className = 'radioCard';
+    }
   }
 }
