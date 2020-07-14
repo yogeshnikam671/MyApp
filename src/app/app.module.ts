@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { RadioCardComponent } from './components/radio-card/radio-card.component';
 import { CheckedImageComponent } from './assets/images/checked-image/checked-image.component';
 import { RadioCardsComponent } from './containers/radio-cards/radio-cards.component';
+import { ConfigurationCardComponent } from './containers/configuration-card/configuration-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RadioCardComponent,
     CheckedImageComponent,
-    RadioCardsComponent
+    RadioCardsComponent,
+    ConfigurationCardComponent
   ],
   imports: [
   BrowserModule,
