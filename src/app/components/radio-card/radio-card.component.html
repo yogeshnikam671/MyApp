@@ -1,0 +1,8 @@
+<div class="{{class}}">
+  <app-checked-image class="radio-checked" *ngIf="isChecked"></app-checked-image>
+  <input type="radio" (change)="radioCheckedHandler()" [disabled] = "disableRadio">
+  <div>
+    <p>{{title}}</p>
+    <p>{{description}}</p>
+  </div>
+</div>

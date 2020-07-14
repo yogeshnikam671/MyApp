@@ -1,0 +1,6 @@
+<div class="radioCards">
+  <app-radio-card class="radioCard" *ngFor="let dataElem of data"
+                  [title]="dataElem.title" [description]="dataElem.description"
+                  (radioClickedEvent)="disableRadioButton()" [disableRadio] = "disableRadio">
+  </app-radio-card>
+</div>
