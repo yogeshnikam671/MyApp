@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+import { ConfigurationCardService } from '../../services/configuration-card.service';
 
 @Component({
   selector: 'app-configuration-card',
@@ -11,7 +12,7 @@ export class ConfigurationCardComponent implements OnInit {
   data: any;
   checkedRadioCardId: number;
   tickMarkClass: string;
-  constructor() { }
+  constructor(private configurationCardService: ConfigurationCardService) { }
 
   radioClickHandler(id) {
     if (this.checkedRadioCardId) {
@@ -30,43 +31,8 @@ export class ConfigurationCardComponent implements OnInit {
   }
   ngOnInit(): void {
     this.tickMarkClass = 'tick-mark';
-    this.data = [
-      {
-        id: 1,
-        title: 'A Product Title',
-        description: 'Lorem ipsum fdk fdanflk alait gjialebt nckalitej fkjadliebtna nvkalit',
-        isChecked: false
-      },
-      {
-        id: 2,
-        title: 'A Product Title',
-        description: 'Lorem ipsum fdk fdanflk alait gjialebt nckalitej fkjadliebtna nvkalit',
-        isChecked: false
-      },
-      {
-        id: 3,
-        title: 'A Product Title',
-        description: 'Lorem ipsum fdk fdanflk alait gjialebt nckalitej fkjadliebtna nvkalit',
-        isChecked: false
-      },
-      {
-        id: 4,
-        title: 'A Product Title',
-        description: 'Lorem ipsum fdk fdanflk alait gjialebt nckalitej fkjadliebtna nvkalit',
-        isChecked: false
-      },
-      {
-        id: 5,
-        title: 'A Product Title',
-        description: 'Lorem ipsum fdk fdanflk alait gjialebt nckalitej fkjadliebtna nvkalit',
-        isChecked: false
-      },
-      {
-        id: 6,
-        title: 'A Product Title',
-        description: 'Lorem ipsum fdk fdanflk alait gjialebt nckalitej fkjadliebtna nvkalit',
-        isChecked: false
-      }
-    ];
+    this.configurationCardService.getJSON().subscribe(data => {
+      this.data = data;
+    });
   }
 }
