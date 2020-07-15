@@ -5,15 +5,15 @@
       <circle cx="15" cy="15" r="15" fill="#F6F6FA"/>
       <path d="M16.28 17.8V15.52C17.8 14.82 19.36 13.88 19.36 11.38C19.36 9.64 17.74 7.76 15.44 7.76C13.32 7.76 11.48 9.38 11.48 11.72V11.8H13.3V11.64C13.3 10.26 14.14 9.4 15.44 9.4C16.66 9.4 17.54 10.34 17.54 11.44C17.54 13.28 15.92 13.94 14.34 14.48V17.8H16.28ZM16.36 22V19.68H14.26V22H16.36Z" fill="#ADAFB2"/>
     </svg>
-    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="tick-mark">
-      <circle cx="15" cy="15" r="15" attr.fill= {{colors.fill}}/>
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class={{tickMarkClass}}>
+      <circle cx="15" cy="15" r="15" fill= "#DDDEDF"/>
       <path fill-rule="evenodd" clip-rule="evenodd" d="M10.999 14.9277L14.0751 18.2222L19.8879 12" fill="#DDDEDF"/>
-      <path d="M10.999 14.9277L14.0751 18.2222L19.8879 12" attr.stroke={{colors.stroke}} stroke-width="3" stroke-linecap="round"/>
+      <path d="M10.999 14.9277L14.0751 18.2222L19.8879 12" stroke="#ADAFB2" stroke-width="3" stroke-linecap="round"/>
       </svg>
   </div>
   <div class="radioCards">
     <app-radio-card *ngFor="let dataElement of data"
-                    [className] = "getClass(dataElement.isChecked)"
+                    [className] = "getRadioCardClass(dataElement.isChecked)"
                     [id] = "dataElement.id"
                     [title]="dataElement.title" [description]="dataElement.description"
                     [isChecked]="dataElement.isChecked"

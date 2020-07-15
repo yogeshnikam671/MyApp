@@ -24,6 +24,12 @@
 .tick-mark{
   margin-left: 835px;
 }
+.checked-tick-mark circle{
+  fill: #FFCC11;
+}
+.checked-tick-mark path{
+  stroke: #43485C;
+}
 .radioCards{
   background-color: white;
   margin: 0;

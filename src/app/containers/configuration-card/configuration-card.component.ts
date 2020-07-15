@@ -9,9 +9,8 @@ export class ConfigurationCardComponent implements OnInit {
 
   @Input() title: string;
   data: any;
-  class: string;
   checkedRadioCardId: number;
-  colors: any;
+  tickMarkClass: string;
   constructor() { }
 
   radioClickHandler(id) {
@@ -20,25 +19,17 @@ export class ConfigurationCardComponent implements OnInit {
     }
     this.checkedRadioCardId = id;
     this.data[this.checkedRadioCardId - 1].isChecked = true;
-    this.tickmarkHandler();
+    this.tickMarkClass += ' checked-tick-mark';
   }
-  getClass(isChecked) {
+  getRadioCardClass(isChecked) {
     if (isChecked) {
       return 'radioCard radioCard-invert';
     } else {
       return 'radioCard';
     }
   }
-  tickmarkHandler() {
-    this.colors.fill = '#FFCC11';
-    this.colors.stroke = '#43485C';
-  }
   ngOnInit(): void {
-    this.class = 'radioCard';
-    this.colors = {
-      fill: '#DDDEDF',
-      stroke: '#ADAFB2'
-    };
+    this.tickMarkClass = 'tick-mark';
     this.data = [
       {
         id: 1,
