@@ -2,6 +2,7 @@
   width: 80%;
   margin: 0px 10%;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .title{
@@ -52,14 +53,18 @@ app-radio-card{
 
 @media screen and (max-width: 768px){
   .title{
-    font-size: 1rem;
-    margin-left: 7%;
+    font-size: 1.1rem;
+    margin-left: 0;
   }
   .question-mark{
-    margin-left: 10px;
+    margin-left: 0;
   }
   .tick-mark{
-    margin-left: 75px;
+    margin-left: 0;
+  }
+
+  .title-container{
+    justify-content: space-around;
   }
   app-radio-card{
     flex-basis: 100%;
