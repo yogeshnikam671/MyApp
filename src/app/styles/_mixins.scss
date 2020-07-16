@@ -1,0 +1,11 @@
+@mixin centerDiv($width){
+  width: $width;
+  margin: 0 (100% - $width)/2;
+}
+
+@mixin createFlex($justifyContent){
+  display: flex;
+  align-items: center;
+  justify-content: $justifyContent;
+  flex-wrap: wrap;
+}
