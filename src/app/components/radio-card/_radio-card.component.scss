@@ -1,0 +1,54 @@
+.radioCard{
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 131px;
+  width: fit-content;
+  padding-left: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:#F6F6FA;
+}
+.radioCard input{
+  float: left;
+  -webkit-appearance: none;
+  width: 22.88px;
+  height: 22.88px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  outline: none;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.radioCard div{
+  height: 100%;
+  width: 86%;
+  padding-top: 8px;
+  float: right;
+}
+.title{
+  font-size: 1.1rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
+.description{
+  font-size: 0.9rem;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  margin-top: 12px;
+}
+
+.radio-checked{
+  position: absolute;
+  top: 18px;
+  left: 19px;
+}
+
+.radioCard-invert{
+  background-color: #43485C;
+  border: 1px solid #78869E;
+  color: white;
+}

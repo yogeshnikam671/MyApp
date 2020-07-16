@@ -1,0 +1,76 @@
+.configuration-card{
+  width: 80%;
+  margin: 0px 10%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.title{
+  margin-left: 30px;
+  font-size: 1.4rem;
+}
+
+.question-mark{
+  margin-left: 30px;
+}
+
+.tick-mark{
+  margin-left: 814px;
+}
+
+.configuration-card:hover{
+  box-shadow: 0px 15px 40px rgba(67, 72, 92, 0.2);
+}
+
+.title-container{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 78px;
+  border-bottom: 1px solid #E6E6E6;
+}
+.checked-tick-mark circle{
+  fill: #FFCC11;
+}
+.checked-tick-mark path{
+  stroke: #43485C;
+}
+.radioCards{
+  background-color: white;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 38px;
+}
+app-radio-card{
+  margin: 0 23px;
+  margin-top: 30px;
+  flex-basis: 29%;
+}
+
+
+@media screen and (max-width: 768px){
+  .title{
+    font-size: 1.1rem;
+    margin-left: 0;
+  }
+  .question-mark{
+    margin-left: 0;
+  }
+  .tick-mark{
+    margin-left: 0;
+  }
+
+  .title-container{
+    justify-content: space-around;
+  }
+  app-radio-card{
+    flex-basis: 100%;
+  }
+  svg{
+    height: 25px;
+    width: 25px;
+  }
+}

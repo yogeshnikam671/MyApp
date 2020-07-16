@@ -4,7 +4,7 @@ import { ConfigurationCardService } from '../../services/configuration-card.serv
 @Component({
   selector: 'app-configuration-card',
   templateUrl: './configuration-card.component.html',
-  styleUrls: ['./configuration-card.component.css']
+  styleUrls: ['./_configuration-card.component.scss']
 })
 export class ConfigurationCardComponent implements OnInit {
 
