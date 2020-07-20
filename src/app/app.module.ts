@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { RadioCardComponent } from './components/radio-card/radio-card.component';
 import { CheckedImageComponent } from './assets/images/checked-image/checked-image.component';
 import { ConfigurationCardComponent } from './containers/configuration-card/configuration-card.component';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RadioCardComponent,
     CheckedImageComponent,
-    ConfigurationCardComponent
+    ConfigurationCardComponent,
+    ProgressBarComponent
   ],
   imports: [
   BrowserModule,
