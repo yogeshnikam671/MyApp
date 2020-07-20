@@ -10,6 +10,7 @@ import { RadioCardComponent } from './components/radio-card/radio-card.component
 import { CheckedImageComponent } from './assets/images/checked-image/checked-image.component';
 import { ConfigurationCardComponent } from './containers/configuration-card/configuration-card.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
     RadioCardComponent,
     CheckedImageComponent,
     ConfigurationCardComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    ButtonComponent
   ],
   imports: [
   BrowserModule,

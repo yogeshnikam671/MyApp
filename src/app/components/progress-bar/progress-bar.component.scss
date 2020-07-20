@@ -6,7 +6,7 @@
 }
 
 .progress-bar{
-  @include centerDiv(70%);
+  @include centerDiv(65%);
   height: 62px;
   @include createFlex(default);
   position: relative;
@@ -24,10 +24,13 @@
   position: relative;
   bottom: 10px;
 }
-.tick-mark-container p{
+.stage{
   font-size: 0.72rem;
-  width: 50%;
+  max-width: 50%;
   text-align: center;
   position: relative;
   right: 30px
+}
+.last-stage{
+  max-width: 100%;
 }
