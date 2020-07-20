@@ -24,9 +24,16 @@ export class ProgressBarComponent implements OnInit {
   }
 
   isCompletedStage(idx) {
-    return idx <= this.currentStageIdx;
+    return idx < this.currentStageIdx;
   }
 
+  isCurrentStage(idx) {
+    return this.currentStageIdx === idx;
+  }
+
+  isRecentlyCompletedStage(idx) {
+    return idx === this.currentStageIdx - 1;
+  }
   ngOnInit(): void {
     this.progressbarService.currentStageIdxObs.subscribe(value => {
       this.currentStageIdx = value;

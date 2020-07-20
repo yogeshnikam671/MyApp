@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+.button{
+  height: 60px;
+  width: 20%;
+  margin: 5% 40%;
+  cursor: pointer;
+  background-color:$yellowFill;
+  border: none;
+  &:hover{
+    background-color: rgb(255, 220, 95)
+  }
+}

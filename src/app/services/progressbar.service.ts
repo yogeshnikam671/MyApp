@@ -6,7 +6,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 })
 export class ProgressbarService{
 
-  currentStageIndex = -1;
+  currentStageIndex = 0;
   currentStageIdxSubject: BehaviorSubject<number> = new BehaviorSubject(this.currentStageIndex);
   currentStageIdxObs = this.currentStageIdxSubject.asObservable();
   constructor() { }
