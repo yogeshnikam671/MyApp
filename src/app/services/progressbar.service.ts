@@ -15,4 +15,9 @@ export class ProgressbarService{
     this.currentStageIndex++;
     this.currentStageIdxSubject.next(this.currentStageIndex);
   }
+
+  public setCurrentStageIndex(idx) {
+    this.currentStageIndex = idx;
+    this.currentStageIdxSubject.next(idx);
+  }
 }
